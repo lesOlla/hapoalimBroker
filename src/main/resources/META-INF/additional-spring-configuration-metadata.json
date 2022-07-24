@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.cloud.stream.bindings.receiveSensorData-in-0.destination",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.stream.bindings.receiveSensorData-in-0.destination'"
+  },
+  {
+    "name": "spring.cloud.stream.bindings.sendSensorData-in-0.destination",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.stream.bindings.sendSensorData-in-0.destination'"
+  },
+  {
+    "name": "spring.cloud.stream.kafka.bindings.output.producer.topic",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.stream.kafka.bindings.output.producer.topic'"
+  }
+]}
