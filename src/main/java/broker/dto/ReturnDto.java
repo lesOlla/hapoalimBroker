@@ -17,11 +17,7 @@ import lombok.ToString;
 @EqualsAndHashCode()
 @ToString
 public class ReturnDto implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	String pk;
 	LinkedHashMap <String, String> data;
-
 }
