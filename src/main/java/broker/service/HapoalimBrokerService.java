@@ -18,18 +18,17 @@ public class HapoalimBrokerService {
 
 	@Bean
 	public Consumer<RequestDto> handleRequestDto() {
+		System.out.println("i`m inside");
 		return requestDto -> {
-			System.out.println("got: " + requestDto.getPk() + ", operation: " + requestDto.getHeaders().getOperation());
+			System.out.println("got: " + requestDto.getPk() + ", operation: " + requestDto.getHeaders());
 			ReturnDto temp = null;
-			if (requestDto.getHeaders().getOperation().equalsIgnoreCase("Delete")) {
-				temp = new ReturnDto(requestDto.getPk(), null);
-			}
-			if (requestDto.getHeaders().getOperation().equalsIgnoreCase("Insert")
-					|| requestDto.getHeaders().getOperation().equalsIgnoreCase("Update")) {
-				temp = new ReturnDto(requestDto.getPk(), requestDto.getData());
-			}
-			streamBridge.send("sendSensorData-out-0", temp);
-			return;
+			 if (requestDto.getHeaders().getOperation().equalsIgnoreCase("Delete")) { temp
+			 = new ReturnDto(requestDto.getPk(), null); } if
+			  (requestDto.getHeaders().getOperation().equalsIgnoreCase("Insert") ||
+			  requestDto.getHeaders().getOperation().equalsIgnoreCase("Update")) { temp =
+			  new ReturnDto(requestDto.getPk(), requestDto.getData()); }
+			  streamBridge.send("sendSensorData-out-0", temp);
+			 return;
 		};
 	}
 }
